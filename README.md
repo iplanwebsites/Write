@@ -1,4 +1,7 @@
 Write
 =====
 
-A distraction-free writing web app created with ♥ for writers.
+About
+-----
+
+Web App for Distraction-free writing created with ♥ for writers.
