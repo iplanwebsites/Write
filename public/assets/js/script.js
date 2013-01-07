@@ -46,7 +46,8 @@ function init() {
 	// Get the previous text, if any
 	savedText = "";
 	try {
-		savedText = localStorage.getItem("text");
+		if (!window.key)
+			savedText = localStorage.getItem("text");
 	} catch(e) {}
 
 	if(savedText) {
@@ -200,7 +201,7 @@ function init() {
 				myArray = myString.split(""),
 				isStop = false;
 
-				localStorage.setItem("firstTime", "false");
+				localStorage.firstTime = false;
 				textarea.value = "";
 
 			function frameLooper() {
@@ -269,3 +270,25 @@ function init() {
 	}
 
 }
+
+keyz.key_bindings['ctrl+s'] = function() {
+	var content = $('#text').val()
+		, url = '/writeup';
+
+	if (window.key) {
+		url += '/'+window.key;
+	}
+
+	$.post(
+		url,
+		{content: content},
+		function(data) {
+			if (data.key) {
+				location.href = '/'+data.key;
+			}
+		},
+		'json'
+	);
+
+	return false;
+};

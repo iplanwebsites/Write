@@ -128,13 +128,18 @@ html(lang="en")
 
 
     // Heart
-    textarea#text(placeholder="Start writing here.", name="body")
+    textarea#text(placeholder="Start writing here.", name="content")= locals.content
 
     // Preview
     div#preview
 
+    script
+      window.key = '#{locals.key}';
+
     // Scripts
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js")
     script(src="/js/Markdown.Converter.js")
+    script(src="/js/keyz.js")
     script(src="/js/script.js")
 
     script
