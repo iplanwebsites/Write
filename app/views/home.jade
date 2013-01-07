@@ -1,0 +1,150 @@
+!!! 5
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    
+    title Distraction Free Writing
+
+    meta(name="title", content="Distraction Free Writing")
+    meta(name="description", content="I created this small application for you, if you like to write.")
+
+    link(rel="stylesheet", href="/css/style.css")
+    link(rel="stylesheet", href="/css/typography.css")
+
+  body
+
+    // Audio
+    audio#one(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+  
+    audio#two(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+
+    audio#three(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+
+    audio#four(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+
+    audio#five(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+
+    audio#six(preload="true")
+      source(src="/sfx/1.mp3", type="audio/mpeg")
+      source(src="/sfx/1.wav", type="audio/wav")
+
+
+    audio#enter1(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+    audio#enter2(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+    audio#enter3(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+    audio#enter4(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+    audio#enter5(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+    audio#enter6(preload="true")
+      source(src="/sfx/enter.mp3", type="audio/mpeg")
+      source(src="/sfx/enter.wav", type="audio/wav")
+
+
+    // Settings/Info
+    input#toggle(type="checkbox", name="toggle")
+    label.toggle(for="toggle")
+
+    #about
+      .logo
+
+      h3 About
+
+      p.
+        This little web app has been created for those what would
+        like to write without any distractions. CTRL+M for Markdown
+        Support.
+
+      p
+        | Source on 
+        a(href="http://github.com/kushsolitary/Write", target="_blank") Github
+
+
+      h3 Preferences
+
+      p
+        a#muteBtn(href="javascript:void(0);") sounds
+        |  : 
+        span#muteVal yes
+        
+        br
+
+        a#fsBtn(href="javascript:void(0);") fullscreen
+        |  : 
+        span#fsVal no
+
+        br
+
+        Fullscreen may not work sometimes.
+    
+      p
+        | There are around 
+        a#wordCount 0 words
+        |  in your current document.
+
+
+      h3 Credits
+
+      ul
+        li
+          a(href="http://twitter.com/kushsolitary", target="_blank") Kushagra
+
+        li
+          a(href="http://twitter.com/_rishabhp", target="_blank") Rishabh
+
+
+      h3 Other
+
+      ul
+        li
+          a(href="http://cssdeck.com", target="_blank") CSSDeck
+
+        li
+          a(href="http://khele.in", target="_blank") Khele
+
+
+    // Heart
+    textarea#text(placeholder="Start writing here.", name="body")
+
+    // Preview
+    div#preview
+
+    // Scripts
+    script(src="/js/Markdown.Converter.js")
+    script(src="/js/script.js")
+
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28350469-1']);
+      _gaq.push(['_setDomainName', 'solitarydesigns.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
