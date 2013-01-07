@@ -9,7 +9,9 @@ Web App for Distraction-free writing created with ♥ for writers.
 Setup
 -----
 
-Install dependencies via package.json.
+[Node.js](http://nodejs.org/) and [Redis](http://redis.io) are required to use this app.
+
+Install dependencies via `package.json`.
 
 ```bash
 $ npm install
